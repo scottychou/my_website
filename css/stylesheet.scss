@@ -1,0 +1,140 @@
+body {
+  height: 100%;
+}
+html {
+  height: 100%;
+  font-family: 'Playfair Display', sans-serif;
+}
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+#bgImage{
+  background:url("../imgs/SplitShire.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  -webkit-filter: opacity(.8);
+  position:absolute;
+  z-index: -1;
+  height:100%;
+  width:100%;
+}
+header {
+  position:relative;
+  height:8em;
+  #myLogo {
+    float:left;
+    padding-left:50px;
+    font-size: 3em;
+  }
+  nav.navbar {
+    left:0;
+    right:0;
+    position:fixed;
+    z-index: 1;
+    color:white;
+    padding-top: 25px;
+    ul {
+      float:right;
+      margin-right: 50px;
+      li {
+        display: inline-block;
+        padding: 2px;
+        margin: 2px;
+      }
+    }
+  }
+}
+#aboutSection {
+  padding: 5em 0;
+  position:relative;
+  #profilePic {
+    background:url("../imgs/ProfilePic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    height:100px;
+    width:100px;
+    margin: 0 auto;
+  }
+  #developer {
+    text-align: center;
+    color:white;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1rem;
+    font-family: "Open Sans Condensed";
+    padding:30px 0;
+  }
+  #introText{
+    text-align: center;
+    color:white;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2rem;
+  }
+}
+.category-header{
+  font-size: 3em;
+}
+
+#projectSection,
+#blogSection,
+#contactSection {
+  display:none;
+  color:white;
+  text-align: center;
+  padding-top: 5em;
+  a{
+    color:white;
+  }
+}
+
+
+
+
+
+
+
+#myFooter {
+  color:white;
+  bottom:0;
+  width:100%;
+  position:absolute;
+  text-align:center;
+  i {
+    margin-right:1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*underline animation*/
+.underline-animation{
+  position:relative;
+}
+.underline-animation::before, .underline-animation::after{
+  position:absolute;
+  content:"";
+  background-color: white;
+  bottom:-3px;
+  height:3px;
+  transition: all .3s linear;
+  right:50%;
+  left:50%;
+}
+.underline-animation:hover::after{
+  right:0%;
+}
+.underline-animation:hover::before{
+  left:0%;
+}
