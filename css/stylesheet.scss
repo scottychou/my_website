@@ -44,6 +44,7 @@ header {
         display: inline-block;
         padding: 2px;
         margin: 2px;
+        cursor: pointer; cursor: hand;
       }
     }
   }
@@ -87,7 +88,7 @@ header {
   display:none;
   color:white;
   text-align: center;
-  padding-top: 5em;
+  padding-top: 3em;
   a{
     color:white;
   }
@@ -106,6 +107,7 @@ header {
   position:absolute;
   text-align:center;
   i {
+    margin-left:1em;
     margin-right:1em;
   }
 }
