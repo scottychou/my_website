@@ -1,9 +1,12 @@
-body {
-  height: 100%;
+$headerHeight: 70px;
+$footerHeight: 42px;
+* {
+  margin:0;
 }
-html {
-  height: 100%;
+body,html{
   font-family: 'Playfair Display', sans-serif;
+  overflow:hidden;
+  height:100%;
 }
 .clearfix:after{
   content: "";
@@ -22,36 +25,43 @@ html {
   height:100%;
   width:100%;
 }
-header {
-  position:relative;
-  height:8em;
+#myHeader {
+  width:100%;
+  height:$headerHeight;
+  min-width: 606px;
   #myLogo {
+    height:$headerHeight;
     float:left;
     padding-left:50px;
     font-size: 3em;
-  }
-  nav.navbar {
-    left:0;
-    right:0;
-    position:fixed;
-    z-index: 1;
     color:white;
-    padding-top: 25px;
+  }
+  #navbar{
+    height:$headerHeight;
+    float:right;
+    margin-right: 50px;
+    display:table;
     ul {
-      float:right;
-      margin-right: 50px;
+      display: table-cell;
+      vertical-align: middle;
       li {
+        color:white;
         display: inline-block;
         padding: 2px;
         margin: 2px;
-        cursor: pointer; cursor: hand;
+        cursor: pointer;
       }
     }
   }
 }
+
+#theContent {
+  box-sizing: border-box;
+  padding-top: $headerHeight;
+  height:calc(100% - #{$headerHeight} - #{$footerHeight});
+}
+
 #aboutSection {
-  padding: 5em 0;
-  position:relative;
   #profilePic {
     background:url("../imgs/ProfilePic.jpg");
     background-repeat: no-repeat;
@@ -78,8 +88,13 @@ header {
     line-height: 2rem;
   }
 }
+
 .category-header{
+  display:block;
+  width:100%;
   font-size: 3em;
+  margin:0 auto;
+  padding-bottom: $headerHeight;
 }
 
 #projectSection,
@@ -88,36 +103,93 @@ header {
   display:none;
   color:white;
   text-align: center;
-  padding-top: 3em;
-  a{
-    color:white;
+  overflow-x:hidden;
+}
+
+#projectSection {
+  overflow-y: scroll;
+  height:100%;
+  .twitch-bg {
+    background-color: rgba(white,0.8);
   }
+  .twitch-text-color {
+    color:#594b63;
+    font-weight: bold;
+    a {
+      background-color: #594b63;
+      margin-top: 20px;
+    }
+  }
+  .oklunch-bg {
+    background-color: rgba(#31355b,0.8)
+  }
+  .oklunch-text-color {
+    color:#bdbdbd;
+    font-weight: bold;
+    a {
+      background-color: #bdbdbd;
+      color:#31355b;
+      margin-top: 20px;
+    }
+  }
+  .project-row {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    .preview-box {
+      margin:0 auto;
+      padding: 20px;
+      padding-top:40px;
+      text-align: center;
+      max-width:800px;
+      min-width: 440px;
+      .project-preview {
+        display:inline;
+        max-width: 100%;
+        height:auto;
+        border-radius: 10px;
+      }
+    }
+    .project-text {
+      padding:20px;
+      padding-top: 0;
+      min-width:440px;
+      text-align: center;
+      .project-name {
+        margin: 0 auto;
+        font-size: 3em;
+      }
+    }
+  }
+}
+.btn-gradient {
+	text-decoration: none;
+	color: white;
+	padding: 10px 30px;
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom: 4px solid rgba(0,0,0,0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
 }
 
 
 
 
-
-
-
 #myFooter {
-  color:white;
-  bottom:0;
-  width:100%;
+  background-color: #c3c3c3;
   position:absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  color:black;
+  height:$footerHeight;
   text-align:center;
   i {
     margin-left:1em;
     margin-right:1em;
   }
 }
-
-
-
-
-
-
-
 
 
 /*underline animation*/
