@@ -11,9 +11,9 @@
   </head>
   <body>
     <div id="bgImage"></div>
-    <header>
-      <nav class='navbar clearfix'>
-        <span id="myLogo">scottychou</span>
+    <header id="myHeader">
+      <span id="myLogo">scottychou</span>
+      <nav id="navbar">
         <ul>
           <li id="about" class="underline-animation">About</li>
           <li id="projects" class="underline-animation">Projects</li>
@@ -23,47 +23,99 @@
       </nav>
     </header>
 
-    <section id="aboutSection">
-      <div id="profilePic"></div>
-      <div id="developer">
-        DEVELOPER
-      </div>
-      <div id="introText">
-        I'm Scott, developer from Chicago. <br>
-        I design simple and clean interfaces for web, mobile and desktop applications.
-      </div>
-    </section>
 
-    <section id="projectSection">
-      <span class="category-header">PROJECTS</span> <br>
-      underCONSTRUCTION
-    </section>
 
-    <section id="blogSection">
-      <span class="category-header">BLOG</span> <br>
-      underCONSTRUCTION
-    </section>
+    <div id="theContent">
+      <section id="aboutSection">
+        <div id="profilePic"></div>
+        <div id="developer">
+          DEVELOPER
+        </div>
+        <div id="introText">
+          I'm Scott, developer from Chicago. <br>
+          I design simple and clean interfaces for web, mobile and desktop applications.
+        </div>
+      </section>
 
-    <section id="contactSection">
-      <span class="category-header">Contact Me</span> <br>
-      <p>
-        Want to say hello? Need creative help? Send me a message…
-      </p>
-      <p>
-        My email address is iscott.chou@gmail.com
-      </p>
-      <p>
-        or
-      </p>
-      <a href="mailto:iscott.chou@gmail.com">Click here to email me</a>
-    </section>
+      <section id="projectSection">
+        <h1 class="category-header">PROJECTS</h1>
+
+        <div class="project-row twitch-bg">
+          <div class="preview-box">
+            <img class="project-preview" src="imgs/twitchPreview.png" alt="" />
+          </div>
+          <div class="twitch-text-color project-text">
+            <h1 class="project-name">Twitch TV Viewer</h1>
+            <p class="project-details">
+              As an avid user of twitch.tv, I thought it would be helpful if I
+              had a personalized list of my favorite streamers at the click of a button.
+              I'm able to see if they're online, and by clicking their name, I can see
+              detailed statistics about their stream such as what game they're playing,
+              how long since the stream started, and a preview of what I can expect to
+              see if I decide to view their stream directly on Twitch.tv.  Additionally,
+              this is designed responsively with custom breakpoints and no bootstrap at all.
+            </p>
+            <br>
+            <p class="project-techs">
+              Technologies used: <br>
+              HTML5, CSS3, JS, JQuery, Twitch API, Sass, Responsive Design
+            </p>
+            <a class="project-link btn-gradient" href="https://rawgit.com/scottychou/twitchViewer/master/index.html">View Here</a>
+          </div>
+        </div>
+
+        <div class="project-row oklunch-bg">
+          <div class="preview-box">
+            <img class="project-preview" src="imgs/oklunchPreview.png" alt="" />
+          </div>
+          <div class="oklunch-text-color project-text">
+            <h1 class="project-name">OKLunch</h1>
+            <p class="project-details">
+              This is my final project for my immersive coding experience at Dev Bootcamp -
+              created in February 2016.  It is a full stack application created in Ruby on Rails.
+              The idea for OKLunch is essentially a Tinder-like app, except for lunch and two
+              layers of matching - matching restaurants and matching with users.  Users
+              can register an account manually, or use a one-click registration via Facebook login.
+
+
+            </p>
+            <br>
+            <p class="project-techs">
+              Technologies used: <br>
+              HTML5, CSS3, JS, JQuery, JQuery UI, OmniAuth API, Yelp API, Facebook API,
+              Ruby on Rails, PostgreSQL, ActiveRecord, Heroku
+            </p>
+            <a class="project-link btn-gradient" href="https://www.oklunch.herokuapp.com">View Here</a>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="blogSection">
+        <h1 class="category-header">BLOG</h1>
+        underCONSTRUCTION
+      </section>
+
+      <section id="contactSection">
+        <h1 class="category-header">Contact Me</h1>
+        <p>
+          Want to say hello? Need creative help? Send me a message…
+        </p>
+        <p>
+          My email address is iscott.chou@gmail.com
+        </p>
+        <p>
+          or
+        </p>
+        <a href="mailto:iscott.chou@gmail.com">Click here to email me</a>
+      </section>
+    </div>
 
     <footer id=myFooter>
-      <a href="#"><i class="fa fa-facebook fa-inverse"></i></a>
-      <a href="https://twitter.com/scottychou"><i class="fa fa-twitter fa-inverse"></i></a>
-      <a href="https://github.com/scottychou"><i class="fa fa-github fa-inverse"></i></a>
-      <a href="https://www.linkedin.com/in/scottychou"><i class="fa fa-linkedin fa-inverse"></i></a>
-      <p>© 2016 <a href="#">Scott Chou</a>. All rights reserved.</p>
+      <a href="https://twitter.com/scottychou"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/scottychou"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/scottychou"><i class="fa fa-linkedin"></i></a>
+      <p>© 2016 Scott Chou. All rights reserved.</p>
     </footer>
     <!-- js scripts -->
     <script src="js/jquery-3.1.1.min.js"></script>
